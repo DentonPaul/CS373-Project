@@ -1,0 +1,42 @@
+To install the needed libraries:
+
+`cd sources`
+
+then
+
+`python -m pip install -r requirements.txt`
+
+~~~
+
+One can run any of the algorithms individually by running the following format in the terminal:
+
+`cd sources`
+
+then
+
+`python main.py *algorithm*`
+
+Where `*algorithm*` is replaced by the following short-hand expressions for each algorithm.
+
+| Short Hand | Algorithm                                                    | Runtime |
+| ---------- | ------------------------------------------------------------ | ------- |
+| bsknn      | Bootstrapping - K Nearest Neighbors                          | < 1 min |
+| bssvm      | Bootstrapping - Support Vector Machine                       | 1-2 min |
+| tfknn      | Ten-Fold Cross Validation - K Nearest Neighbors              | < 1 min |
+| tfsvm      | Ten-Fold Cross Validation - Support Vector Machine           | 1-2 min |
+| bs         | Both Bootstrapping Algorithms                                | 2-3 min |
+| tf         | Both Ten-Fold Cross Validation Algorithms                    | 2-3 min |
+| knn        | Both K Nearest Neighbors Algorithms                          | 1-2 min |
+| svm        | Both Support Vector Machine Algorithms                       | 4-6 min |
+| all        | All 4 algorithms                                             | 10 min  |
+| datainfo   | Prints dataset and extra information about each algorithm    | N/A     |
+
+So if I wanted to run all the SVM algorithms, I'd type in the terminal:
+
+`python main.py svm`
+
+And all the SVM algorithms will run. Each short-hand will give a time estimate for how long it will take to run all the algorithms requested. They can also be chained as such:
+
+`python main.py bsknn bssvm tfsvm datainfo`
+
+Images of the ROC and subset data accuracies will auto generate when algorithms are run, stored in the images folder.
